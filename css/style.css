@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+TODO reconfig everything with grid
+TODO  add Revolving cards css
+/* general */
+a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  margin: auto;
+  max-width: var(--max-width);
+}
+.page-container {
+  height: 100vh;
+}
+.main {
+  height: calc(85vh - 80px);
+}
+.footer {
+  height: 15vh;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: var(--secondery-font);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+p {
+  font-family: var(--secondery-font);
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+/* nav */
+.navbar {
+  font-family: var(--secondery-font);
+  font-weight: 600;
+  font-size: 1.5rem;
+  height: 80px;
+  background-color: var(--color3);
+  opacity: 0.9;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar a {
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+.navbar .logo {
+  color: black;
+}
+.navbar .logo span {
+  color: var(--color6);
+}
+
+/* showcase */
+#showcase .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  height: 100%;
+}
+#showcase .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#showcase .content .logo {
+  position: relative;
+  font-size: 3rem;
+  margin: 0 auto;
+}
+
+#showcase .content .logo::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: #333;
+  height: 3px;
+}
+#showcase .content .logo::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 100%;
+  background-color: #333;
+  height: 2px;
+}
+
+#showcase .content h1 {
+  background-color: ;
+  text-align: center;
+}
+
+#showcase .big-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#showcase .big-head__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: var(--color6);
+}
+#showcase .big-head__box img {
+  height: 90%;
+  transform: rotate(-10deg);
+}
+
+/* footer */
+.footer {
+  background-color: var(--color1);
+}
+.footer .social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer .social a {
+  height: 50px;
+  border-bottom: 2px solid black;
+}
+
+/* about */
+
+#about #showcase .content {
+  flex-direction: column;
+  align-items: flex-start;
+}
